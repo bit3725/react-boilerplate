@@ -14,7 +14,10 @@
   "plugins": [
     "react",
   ],
-  "extends": "eslint:recommended",
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors"
+  ],
   "rules": {
     "comma-dangle": [2, "only-multiline"],
     "no-console": 1,
@@ -54,5 +57,11 @@
     "react/react-in-jsx-scope": 2,
     "react/self-closing-comp": 2,
     "react/wrap-multilines": 2,
+  },
+  "settings": {
+    "import/ignore": [
+      "node_modules",
+      ".css",
+    ]
   },
 }
